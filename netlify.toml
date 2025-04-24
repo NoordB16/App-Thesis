@@ -1,0 +1,13 @@
+[build]
+  # 1) base: de map waarin jouw package.json + node_modules/ scripts leven
+  base    = ""               # of "" als package.json in root staat
+
+  # 2) command: het npm-script dat de productie-build genereert
+  command = "npm run build"     # roept in app/package.json “build”: “expo build:web” aan
+
+  # 3) publish: de map (relatief aan `base`) met de statische output
+  publish = "web-build"         # expo build:web schrijft hier zijn assets
+
+# Optioneel: pin je Node-versie in Netlify’s omgeving
+[build.environment]
+  NODE_VERSION = "18"
